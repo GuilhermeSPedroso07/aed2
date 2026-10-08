@@ -35,12 +35,10 @@ class HashTable:
         
         for item in tabela_antiga:
             if item is not None:
-                nome = item.nome
-                dados = item.dados
-                self.add_corpo(nome, dados)
+                self.add_corpo(item.nome, item.dados)
                 pointer = item.next
                 while pointer != None:
-                    self.add_corpo(nome, dados)
+                    self.add_corpo(pointer.nome, pointer.dados)
                     pointer = pointer.next
     
     def add_corpo(self, nome, dados):
